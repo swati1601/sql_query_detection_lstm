@@ -1,0 +1,1001 @@
+query,label
+DELETE FROM logs WHERE name < 10;,0
+'; DELETE FROM payments; --,1
+DELETE FROM orders WHERE created_at < 2;,0
+SELECT quantity FROM users WHERE quantity > 2;,0
+SELECT created_at FROM customers WHERE created_at > 2;,0
+'; EXEC xp_cmdshell('dir'); --,1
+UPDATE payments SET email = Priya WHERE id = 2;,0
+SELECT * FROM students WHERE id='' OR ''1''=''1'' #;,1
+SELECT * FROM orders WHERE name=''' OR ''1''=''1'' #';,1
+"SELECT email FROM students WHERE email=''' UNION SELECT credit_card, expiry FROM students --';",1
+"INSERT INTO products (id,product,qty) VALUES (20, 10, 10);",0
+SELECT id FROM users WHERE id LIKE '%test%';,0
+"SELECT * FROM logs WHERE id='' UNION SELECT credit_card, expiry FROM logs --;",1
+SELECT email FROM students WHERE email=''' OR EXISTS(SELECT * FROM students WHERE username=''admin'') --';,1
+SELECT age FROM logs WHERE age LIKE '%test%';,0
+SELECT * FROM employees WHERE username='1'' OR ''1''=''1'' LIMIT 1; --';,1
+1' OR '1'='1' LIMIT 1; --,1
+SELECT * FROM sessions WHERE id='' OR ''x''=''x'' /*;,1
+UPDATE employees SET age = Bob WHERE id = 2;,0
+SELECT department FROM payments WHERE department = 'Bob';,0
+SELECT email FROM sessions WHERE email = 'Alice';,0
+SELECT email FROM books WHERE email='''; DELETE FROM books; --';,1
+SELECT * FROM sessions WHERE name='''; DROP TABLE sessions; --';,1
+"INSERT INTO customers (title,author) VALUES (5, 20);",0
+SELECT * FROM products WHERE id='' OR ''a''=''a'' --;,1
+SELECT created_at FROM users WHERE created_at LIKE '%test%';,0
+"""; DROP TABLE logs; --",1
+SELECT price FROM sessions WHERE price = 'Priya';,0
+SELECT * FROM sessions WHERE quantity=Alice;,0
+SELECT * FROM sessions WHERE id='' OR EXISTS(SELECT * FROM sessions WHERE username=''admin'') --;,1
+SELECT * FROM users WHERE name='admin'' #';,1
+SELECT * FROM sessions WHERE username='''; UPDATE users SET role=''admin'' WHERE id=1; --';,1
+DELETE FROM customers WHERE id < 5;,0
+UPDATE sessions SET age = Alice WHERE id = 100;,0
+SELECT email FROM employees WHERE email > 1;,0
+DELETE FROM products WHERE age < 20;,0
+SELECT * FROM users WHERE price=Raj;,0
+SELECT COUNT(*) FROM payments WHERE id = 'Swati';,0
+SELECT * FROM sessions WHERE username=''' OR ''x''=''x'' /*';,1
+SELECT quantity FROM orders WHERE quantity > 500;,0
+SELECT name FROM students WHERE name > 10;,0
+' OR 'a'='a' --,1
+SELECT email FROM customers WHERE email = 'Swati';,0
+UPDATE payments SET name = Swati WHERE id = 10;,0
+' OR EXISTS(SELECT * FROM books WHERE username='admin') --,1
+'; DROP TABLE logs; --,1
+UPDATE customers SET price = Raj WHERE id = 5;,0
+UPDATE employees SET department = department + 5 WHERE balance = 'Priya';,0
+"INSERT INTO students (id,product,qty) VALUES (2, 5, 5);",0
+DELETE FROM orders WHERE balance < 2;,0
+SELECT email FROM books WHERE email LIKE '%test%';,0
+"' UNION SELECT credit_card, expiry FROM logs --",1
+SELECT quantity FROM employees WHERE quantity = 'Swati';,0
+SELECT * FROM students WHERE email=Alice;,0
+SELECT quantity FROM books WHERE quantity LIKE '%test%';,0
+"' UNION SELECT credit_card, expiry FROM books --",1
+"SELECT * FROM sessions WHERE name=''' UNION SELECT credit_card, expiry FROM sessions --';",1
+SELECT email FROM employees WHERE email='admin'' --';,1
+SELECT email FROM books WHERE email = 'Alice';,0
+UPDATE products SET department = Charlie WHERE id = 500;,0
+"INSERT INTO employees (title,author) VALUES (2, 1);",0
+SELECT COUNT(*) FROM students WHERE status = 'Alice';,0
+SELECT * FROM books WHERE id=admin'' --;,1
+UPDATE books SET department = Swati WHERE id = 30;,0
+SELECT quantity FROM orders WHERE quantity > 500;,0
+"INSERT INTO books (id,name) VALUES (1, 'Priya');",0
+SELECT created_at FROM customers WHERE created_at = 'Swati';,0
+'; EXEC xp_cmdshell('dir'); --,1
+SELECT email FROM orders WHERE email=''' OR ''a''=''a'' --';,1
+SELECT department FROM users WHERE department > 100;,0
+1' OR '1'='1' LIMIT 1; --,1
+"INSERT INTO books (email,active) VALUES (500, 30);",0
+SELECT * FROM users WHERE quantity=Alice;,0
+UPDATE logs SET quantity = quantity + 1 WHERE id = 'Alice';,0
+SELECT name FROM sessions WHERE name = 'Charlie';,0
+UPDATE products SET balance = balance + 1 WHERE name = 'Bob';,0
+SELECT * FROM employees WHERE name=''' OR ''x''=''x'' /*';,1
+SELECT department FROM employees WHERE department LIKE '%test%';,0
+SELECT * FROM books WHERE username='''; DELETE FROM books; --';,1
+' OR '1'='1' #,1
+SELECT balance FROM payments WHERE balance = 'Priya';,0
+DELETE FROM sessions WHERE price < 10;,0
+SELECT * FROM users WHERE username=''' OR 1=1 --';,1
+"SELECT * FROM students WHERE username=''' UNION SELECT credit_card, expiry FROM students --';",1
+UPDATE students SET price = Bob WHERE id = 30;,0
+SELECT * FROM books WHERE email=Swati;,0
+"""; DROP TABLE logs; --",1
+SELECT name FROM students WHERE name = 'Alice';,0
+UPDATE employees SET balance = balance + 2 WHERE created_at = 'Bob';,0
+'; DELETE FROM customers; --,1
+SELECT * FROM students WHERE balance=Priya;,0
+UPDATE books SET status = status + 1 WHERE name = 'Bob';,0
+"SELECT * FROM users WHERE id="" OR 1=1 --;",1
+SELECT status FROM products WHERE status > 500;,0
+SELECT * FROM products WHERE username='admin'' #';,1
+"SELECT * FROM customers WHERE username='"" OR ""1""=""1"" --';",1
+SELECT price FROM users WHERE price > 5;,0
+SELECT * FROM sessions WHERE username='admin'' --';,1
+UPDATE books SET created_at = created_at + 1 WHERE department = 'Alice';,0
+SELECT price FROM orders WHERE price LIKE '%test%';,0
+""" OR ""1""=""1"" --",1
+SELECT * FROM payments WHERE username=''' OR EXISTS(SELECT * FROM payments WHERE username=''admin'') --';,1
+""" OR ""1""=""1"" --",1
+UPDATE customers SET balance = balance + 1 WHERE quantity = 'Charlie';,0
+SELECT email FROM customers WHERE email=''' OR ''1''=''1'' #';,1
+SELECT * FROM students WHERE balance=Alice;,0
+UPDATE users SET email = Priya WHERE id = 20;,0
+SELECT * FROM products WHERE username=''' OR ''x''=''x'' /*';,1
+SELECT * FROM users WHERE price=Swati;,0
+SELECT * FROM payments WHERE username='''; DELETE FROM payments; --';,1
+UPDATE users SET age = Bob WHERE id = 500;,0
+"SELECT * FROM customers WHERE id='' UNION SELECT NULL, username, password FROM customers --;",1
+"SELECT email FROM logs WHERE email=''' UNION SELECT NULL, username, password FROM logs --';",1
+"SELECT * FROM books WHERE name=''' UNION SELECT NULL, username, password FROM books --';",1
+""" OR ""1""=""1"" --",1
+SELECT email FROM users WHERE email LIKE '%test%';,0
+SELECT * FROM books WHERE name='admin'' #';,1
+1' OR '1'='1' LIMIT 1; --,1
+UPDATE orders SET age = Swati WHERE id = 10;,0
+' OR SLEEP(5) --,1
+' OR EXISTS(SELECT * FROM employees WHERE username='admin') --,1
+"INSERT INTO payments (title,author) VALUES (30, 30);",0
+"SELECT * FROM payments WHERE id='' UNION SELECT NULL, username, password FROM payments --;",1
+' OR '1'='1' #,1
+UPDATE products SET created_at = created_at + 1 WHERE status = 'Alice';,0
+SELECT status FROM products WHERE status = 'Priya';,0
+SELECT COUNT(*) FROM employees WHERE id = 'Bob';,0
+' OR SLEEP(5) --,1
+SELECT price FROM payments WHERE price > 5;,0
+"INSERT INTO orders (id,product,qty) VALUES (30, 2, 2);",0
+'; DROP TABLE sessions; --,1
+DELETE FROM students WHERE name < 1;,0
+SELECT COUNT(*) FROM products WHERE department = 'Priya';,0
+SELECT email FROM users WHERE email=''' OR EXISTS(SELECT * FROM users WHERE username=''admin'') --';,1
+SELECT * FROM products WHERE id='' OR ''1''=''1'' #;,1
+SELECT email FROM payments WHERE email=''' OR ''a''=''a'' --';,1
+SELECT COUNT(*) FROM users WHERE age = 'Bob';,0
+UPDATE logs SET department = Bob WHERE id = 10;,0
+DELETE FROM payments WHERE price < 100;,0
+SELECT balance FROM customers WHERE balance = 'Charlie';,0
+SELECT COUNT(*) FROM students WHERE name = 'Bob';,0
+DELETE FROM payments WHERE created_at < 5;,0
+"INSERT INTO products (id,name) VALUES (100, 'Charlie');",0
+SELECT status FROM logs WHERE status > 5;,0
+SELECT * FROM products WHERE name=Bob;,0
+SELECT quantity FROM employees WHERE quantity LIKE '%test%';,0
+' OR EXISTS(SELECT * FROM users WHERE username='admin') --,1
+"SELECT * FROM sessions WHERE name='"" OR ""1""=""1"" --';",1
+SELECT COUNT(*) FROM payments WHERE status = 'Raj';,0
+' OR '1'='1' #,1
+SELECT * FROM students WHERE name=''' OR ''x''=''x'' /*';,1
+SELECT * FROM products WHERE name='''; UPDATE users SET role=''admin'' WHERE id=1; --';,1
+"INSERT INTO logs (id,name) VALUES (10, 'Swati');",0
+SELECT * FROM sessions WHERE name='admin'' --';,1
+SELECT created_at FROM orders WHERE created_at = 'Charlie';,0
+UPDATE payments SET created_at = created_at + 5 WHERE balance = 'Raj';,0
+SELECT created_at FROM employees WHERE created_at = 'Raj';,0
+UPDATE books SET status = Priya WHERE id = 500;,0
+SELECT status FROM sessions WHERE status = 'Swati';,0
+SELECT email FROM customers WHERE email > 10;,0
+DELETE FROM logs WHERE quantity < 100;,0
+SELECT * FROM payments WHERE username='1'' OR ''1''=''1'' LIMIT 1; --';,1
+SELECT * FROM employees WHERE name=''' OR EXISTS(SELECT * FROM employees WHERE username=''admin'') --';,1
+' OR EXISTS(SELECT * FROM sessions WHERE username='admin') --,1
+SELECT department FROM logs WHERE department LIKE '%test%';,0
+SELECT * FROM payments WHERE name=''' OR ''x''=''x'' /*';,1
+"INSERT INTO payments (name,email) VALUES ('Swati', 20);",0
+SELECT department FROM users WHERE department LIKE '%test%';,0
+SELECT created_at FROM sessions WHERE created_at > 500;,0
+' OR 1=1 --,1
+DELETE FROM orders WHERE id < 30;,0
+SELECT created_at FROM orders WHERE created_at = 'Swati';,0
+SELECT name FROM users WHERE name LIKE '%test%';,0
+'; DROP TABLE logs; --,1
+UPDATE logs SET quantity = quantity + 2 WHERE name = 'Raj';,0
+SELECT age FROM products WHERE age LIKE '%test%';,0
+SELECT age FROM students WHERE age = 'Charlie';,0
+SELECT balance FROM orders WHERE balance LIKE '%test%';,0
+DELETE FROM books WHERE status < 100;,0
+"SELECT email FROM orders WHERE email=''' UNION SELECT NULL, username, password FROM orders --';",1
+1' OR '1'='1' LIMIT 1; --,1
+'; UPDATE users SET role='admin' WHERE id=1; --,1
+UPDATE users SET quantity = quantity + 1 WHERE age = 'Bob';,0
+"SELECT email FROM customers WHERE email='"" OR 1=1 --';",1
+admin' --,1
+SELECT email FROM payments WHERE email='''; DELETE FROM payments; --';,1
+SELECT department FROM employees WHERE department > 20;,0
+UPDATE logs SET email = email + 1 WHERE age = 'Priya';,0
+"INSERT INTO users (email,active) VALUES (30, 5);",0
+SELECT price FROM payments WHERE price > 100;,0
+SELECT created_at FROM payments WHERE created_at = 'Priya';,0
+SELECT created_at FROM students WHERE created_at > 500;,0
+""" OR ""1""=""1"" --",1
+UPDATE orders SET name = Swati WHERE id = 5;,0
+"SELECT * FROM products WHERE id=""; DROP TABLE products; --;",1
+SELECT email FROM books WHERE email='admin'' --';,1
+SELECT COUNT(*) FROM students WHERE department = 'Priya';,0
+SELECT COUNT(*) FROM sessions WHERE department = 'Raj';,0
+SELECT * FROM logs WHERE id='' OR ''x''=''x'' /*;,1
+' OR EXISTS(SELECT * FROM employees WHERE username='admin') --,1
+SELECT COUNT(*) FROM sessions WHERE balance = 'Priya';,0
+SELECT COUNT(*) FROM customers WHERE name = 'Charlie';,0
+SELECT * FROM logs WHERE name=''' OR ''1''=''1'' --';,1
+SELECT email FROM users WHERE email=''' OR ''1''=''1'' --';,1
+admin' --,1
+"SELECT * FROM logs WHERE id='' UNION SELECT credit_card, expiry FROM logs --;",1
+"SELECT * FROM logs WHERE name='""; DROP TABLE logs; --';",1
+SELECT id FROM products WHERE id = 'Raj';,0
+SELECT email FROM products WHERE email=''' OR ''1''=''1'' #';,1
+SELECT email FROM products WHERE email='''; EXEC xp_cmdshell(''dir''); --';,1
+DELETE FROM payments WHERE balance < 30;,0
+"' UNION SELECT credit_card, expiry FROM employees --",1
+1' OR '1'='1' LIMIT 1; --,1
+SELECT * FROM students WHERE created_at=Alice;,0
+SELECT * FROM customers WHERE id='' OR SLEEP(5) --;,1
+admin' --,1
+SELECT * FROM orders WHERE name='admin'' --';,1
+SELECT price FROM students WHERE price = 'Bob';,0
+' OR '1'='1' #,1
+SELECT age FROM employees WHERE age LIKE '%test%';,0
+"""; DROP TABLE users; --",1
+"INSERT INTO payments (username,password) VALUES ('Priya', 2);",0
+UPDATE sessions SET quantity = Alice WHERE id = 5;,0
+UPDATE orders SET quantity = quantity + 5 WHERE age = 'Alice';,0
+"SELECT * FROM users WHERE username=''' UNION SELECT credit_card, expiry FROM users --';",1
+' OR '1'='1' #,1
+SELECT status FROM books WHERE status LIKE '%test%';,0
+'; EXEC xp_cmdshell('dir'); --,1
+SELECT COUNT(*) FROM orders WHERE department = 'Raj';,0
+SELECT * FROM logs WHERE department=Alice;,0
+"INSERT INTO orders (title,author) VALUES (500, 30);",0
+SELECT * FROM orders WHERE username='admin'' --';,1
+UPDATE logs SET email = Priya WHERE id = 1;,0
+UPDATE students SET status = Priya WHERE id = 100;,0
+SELECT email FROM customers WHERE email='''; DROP TABLE customers; --';,1
+SELECT name FROM employees WHERE name = 'Priya';,0
+SELECT COUNT(*) FROM products WHERE price = 'Bob';,0
+SELECT * FROM products WHERE username='1'' OR ''1''=''1'' LIMIT 1; --';,1
+SELECT * FROM logs WHERE name=Charlie;,0
+SELECT * FROM students WHERE username='admin'' #';,1
+UPDATE students SET price = Swati WHERE id = 5;,0
+SELECT quantity FROM books WHERE quantity = 'Swati';,0
+DELETE FROM sessions WHERE email < 10;,0
+"INSERT INTO employees (id,product,qty) VALUES (500, 30, 5);",0
+SELECT name FROM products WHERE name LIKE '%test%';,0
+SELECT * FROM employees WHERE username='''; EXEC xp_cmdshell(''dir''); --';,1
+UPDATE users SET id = Charlie WHERE id = 5;,0
+'; DROP TABLE payments; --,1
+UPDATE orders SET email = Bob WHERE id = 10;,0
+"SELECT * FROM customers WHERE username='""; DROP TABLE customers; --';",1
+SELECT * FROM orders WHERE name='1'' OR ''1''=''1'' LIMIT 1; --';,1
+UPDATE logs SET quantity = quantity + 2 WHERE age = 'Charlie';,0
+UPDATE logs SET id = id + 1 WHERE status = 'Priya';,0
+UPDATE sessions SET email = Raj WHERE id = 1;,0
+SELECT COUNT(*) FROM payments WHERE status = 'Swati';,0
+UPDATE customers SET age = Bob WHERE id = 100;,0
+DELETE FROM logs WHERE quantity < 20;,0
+"SELECT email FROM books WHERE email='"" OR ""1""=""1"" --';",1
+DELETE FROM customers WHERE age < 10;,0
+SELECT created_at FROM books WHERE created_at > 100;,0
+SELECT email FROM payments WHERE email='''; DELETE FROM payments; --';,1
+SELECT email FROM sessions WHERE email = 'Priya';,0
+'; DELETE FROM employees; --,1
+DELETE FROM products WHERE id < 20;,0
+SELECT * FROM payments WHERE department=Raj;,0
+SELECT status FROM books WHERE status LIKE '%test%';,0
+'; UPDATE users SET role='admin' WHERE id=1; --,1
+DELETE FROM logs WHERE department < 100;,0
+"""; DROP TABLE orders; --",1
+SELECT COUNT(*) FROM payments WHERE price = 'Alice';,0
+SELECT * FROM employees WHERE department=Bob;,0
+SELECT status FROM orders WHERE status > 2;,0
+SELECT department FROM users WHERE department = 'Alice';,0
+SELECT status FROM orders WHERE status > 500;,0
+'; DROP TABLE students; --,1
+SELECT * FROM students WHERE email=Swati;,0
+SELECT * FROM logs WHERE age=Swati;,0
+UPDATE payments SET age = Alice WHERE id = 10;,0
+UPDATE logs SET id = Raj WHERE id = 2;,0
+DELETE FROM users WHERE created_at < 100;,0
+"INSERT INTO products (username,password) VALUES ('Charlie', 10);",0
+SELECT * FROM books WHERE id='' OR SLEEP(5) --;,1
+SELECT status FROM logs WHERE status > 1;,0
+"INSERT INTO sessions (id,product,qty) VALUES (1, 5, 100);",0
+SELECT created_at FROM students WHERE created_at LIKE '%test%';,0
+DELETE FROM sessions WHERE quantity < 2;,0
+SELECT * FROM employees WHERE age=Raj;,0
+SELECT * FROM orders WHERE created_at=Raj;,0
+DELETE FROM logs WHERE price < 10;,0
+SELECT * FROM students WHERE username=''' OR 1=1 --';,1
+SELECT id FROM employees WHERE id = 'Alice';,0
+SELECT created_at FROM students WHERE created_at LIKE '%test%';,0
+SELECT * FROM customers WHERE username='''; DELETE FROM customers; --';,1
+SELECT status FROM logs WHERE status > 500;,0
+SELECT email FROM customers WHERE email=''' OR ''x''=''x'' /*';,1
+SELECT * FROM sessions WHERE email=Priya;,0
+SELECT email FROM payments WHERE email='0'' OR 1=1 --';,1
+SELECT * FROM orders WHERE price=Bob;,0
+SELECT * FROM employees WHERE name='admin'' --';,1
+SELECT * FROM orders WHERE name='admin'' #';,1
+"""; DROP TABLE sessions; --",1
+SELECT * FROM products WHERE price=Raj;,0
+SELECT name FROM sessions WHERE name > 100;,0
+UPDATE students SET created_at = Swati WHERE id = 20;,0
+UPDATE logs SET status = status + 2 WHERE department = 'Charlie';,0
+SELECT * FROM products WHERE balance=Swati;,0
+"SELECT * FROM sessions WHERE name='"" OR 1=1 --';",1
+DELETE FROM sessions WHERE name < 500;,0
+SELECT * FROM sessions WHERE username='''; EXEC xp_cmdshell(''dir''); --';,1
+DELETE FROM products WHERE status < 500;,0
+SELECT quantity FROM products WHERE quantity LIKE '%test%';,0
+DELETE FROM sessions WHERE email < 2;,0
+UPDATE payments SET quantity = quantity + 1 WHERE created_at = 'Bob';,0
+DELETE FROM employees WHERE status < 10;,0
+SELECT * FROM logs WHERE username=''' OR ''1''=''1'' --';,1
+DELETE FROM products WHERE created_at < 5;,0
+SELECT created_at FROM employees WHERE created_at = 'Charlie';,0
+SELECT * FROM logs WHERE quantity=Alice;,0
+SELECT * FROM users WHERE name='''; UPDATE users SET role=''admin'' WHERE id=1; --';,1
+SELECT * FROM products WHERE id=admin'' --;,1
+SELECT * FROM employees WHERE id='' OR ''a''=''a'' --;,1
+SELECT quantity FROM students WHERE quantity > 100;,0
+SELECT balance FROM products WHERE balance LIKE '%test%';,0
+SELECT * FROM sessions WHERE price=Raj;,0
+1' OR '1'='1' LIMIT 1; --,1
+SELECT email FROM students WHERE email=''' OR ''x''=''x'' /*';,1
+SELECT email FROM users WHERE email > 1;,0
+SELECT balance FROM customers WHERE balance = 'Swati';,0
+' OR EXISTS(SELECT * FROM logs WHERE username='admin') --,1
+SELECT email FROM books WHERE email=''' OR ''1''=''1'' #';,1
+SELECT COUNT(*) FROM users WHERE name = 'Priya';,0
+"INSERT INTO sessions (username,password) VALUES ('Charlie', 20);",0
+SELECT name FROM students WHERE name = 'Alice';,0
+"SELECT email FROM customers WHERE email=''' UNION SELECT NULL, username, password FROM customers --';",1
+UPDATE orders SET created_at = Bob WHERE id = 2;,0
+SELECT COUNT(*) FROM books WHERE department = 'Charlie';,0
+"SELECT * FROM customers WHERE username='"" OR 1=1 --';",1
+SELECT * FROM logs WHERE username=''' OR 1=1 --';,1
+SELECT COUNT(*) FROM logs WHERE balance = 'Swati';,0
+"SELECT * FROM customers WHERE name=''' UNION SELECT credit_card, expiry FROM customers --';",1
+1' OR '1'='1' LIMIT 1; --,1
+UPDATE books SET created_at = Priya WHERE id = 2;,0
+"INSERT INTO sessions (title,author) VALUES (2, 1);",0
+SELECT * FROM logs WHERE email=Raj;,0
+SELECT * FROM logs WHERE name=''' OR 1=1 --';,1
+SELECT quantity FROM products WHERE quantity > 1;,0
+SELECT department FROM students WHERE department LIKE '%test%';,0
+SELECT COUNT(*) FROM sessions WHERE created_at = 'Priya';,0
+DELETE FROM customers WHERE quantity < 20;,0
+' OR '1'='1' --,1
+'; DELETE FROM customers; --,1
+SELECT COUNT(*) FROM employees WHERE balance = 'Charlie';,0
+"SELECT * FROM payments WHERE name='"" OR ""1""=""1"" --';",1
+' OR 1=1 --,1
+SELECT email FROM sessions WHERE email=''' OR ''a''=''a'' --';,1
+SELECT * FROM books WHERE id=1'' OR ''1''=''1'' LIMIT 1; --;,1
+SELECT name FROM products WHERE name = 'Bob';,0
+SELECT COUNT(*) FROM logs WHERE email = 'Charlie';,0
+"INSERT INTO logs (name,email) VALUES ('Charlie', 1);",0
+' OR 'x'='x' /*,1
+"SELECT * FROM orders WHERE name='""; DROP TABLE orders; --';",1
+UPDATE logs SET email = email + 2 WHERE balance = 'Charlie';,0
+SELECT * FROM orders WHERE id=Charlie;,0
+SELECT COUNT(*) FROM customers WHERE id = 'Swati';,0
+SELECT email FROM payments WHERE email LIKE '%test%';,0
+UPDATE books SET balance = Alice WHERE id = 5;,0
+SELECT COUNT(*) FROM students WHERE status = 'Alice';,0
+SELECT * FROM employees WHERE status=Priya;,0
+SELECT * FROM products WHERE name=''' OR SLEEP(5) --';,1
+SELECT * FROM customers WHERE username=''' OR ''a''=''a'' --';,1
+"SELECT * FROM orders WHERE username='""; DROP TABLE orders; --';",1
+DELETE FROM books WHERE status < 500;,0
+SELECT * FROM books WHERE id='' OR ''x''=''x'' /*;,1
+SELECT * FROM books WHERE price=Priya;,0
+'; DROP TABLE books; --,1
+"INSERT INTO orders (id,name) VALUES (100, 'Bob');",0
+UPDATE payments SET name = Alice WHERE id = 5;,0
+0' OR 1=1 --,1
+"SELECT * FROM students WHERE name='"" OR 1=1 --';",1
+SELECT * FROM users WHERE username=''' OR SLEEP(5) --';,1
+SELECT quantity FROM sessions WHERE quantity = 'Charlie';,0
+SELECT department FROM users WHERE department = 'Swati';,0
+DELETE FROM books WHERE price < 5;,0
+SELECT COUNT(*) FROM customers WHERE quantity = 'Raj';,0
+SELECT * FROM products WHERE name=''' OR ''1''=''1'' --';,1
+DELETE FROM products WHERE id < 30;,0
+UPDATE payments SET email = Priya WHERE id = 30;,0
+'; EXEC xp_cmdshell('dir'); --,1
+"' UNION SELECT NULL, username, password FROM payments --",1
+SELECT * FROM sessions WHERE username=''' OR ''a''=''a'' --';,1
+SELECT * FROM sessions WHERE id=Swati;,0
+SELECT * FROM sessions WHERE id='' OR SLEEP(5) --;,1
+SELECT email FROM employees WHERE email=''' OR ''1''=''1'' --';,1
+SELECT * FROM orders WHERE balance=Raj;,0
+"INSERT INTO students (id,name) VALUES (30, 'Charlie');",0
+UPDATE payments SET id = id + 2 WHERE status = 'Charlie';,0
+SELECT balance FROM students WHERE balance = 'Raj';,0
+SELECT * FROM students WHERE username=''' OR ''a''=''a'' --';,1
+"""; DROP TABLE products; --",1
+SELECT * FROM users WHERE id='' OR ''a''=''a'' --;,1
+SELECT COUNT(*) FROM sessions WHERE status = 'Alice';,0
+UPDATE logs SET age = Charlie WHERE id = 500;,0
+SELECT email FROM students WHERE email='''; DELETE FROM students; --';,1
+UPDATE sessions SET created_at = Raj WHERE id = 500;,0
+"SELECT * FROM products WHERE name=''' UNION SELECT credit_card, expiry FROM products --';",1
+DELETE FROM sessions WHERE price < 500;,0
+'; EXEC xp_cmdshell('dir'); --,1
+"INSERT INTO users (title,author) VALUES (1, 30);",0
+SELECT * FROM employees WHERE id=''; UPDATE users SET role=''admin'' WHERE id=1; --;,1
+' OR EXISTS(SELECT * FROM customers WHERE username='admin') --,1
+"INSERT INTO customers (name,email) VALUES ('Priya', 30);",0
+DELETE FROM books WHERE name < 2;,0
+DELETE FROM sessions WHERE quantity < 100;,0
+' OR 'x'='x' /*,1
+SELECT * FROM products WHERE name=''' OR 1=1 --';,1
+SELECT * FROM products WHERE name=''' OR ''x''=''x'' /*';,1
+"INSERT INTO products (email,active) VALUES (5, 500);",0
+"' UNION SELECT credit_card, expiry FROM logs --",1
+SELECT * FROM products WHERE username='admin'' #';,1
+SELECT department FROM users WHERE department > 10;,0
+' OR '1'='1' #,1
+SELECT * FROM sessions WHERE id='' OR 1=1 --;,1
+SELECT id FROM books WHERE id > 500;,0
+SELECT * FROM logs WHERE username='''; EXEC xp_cmdshell(''dir''); --';,1
+UPDATE students SET email = email + 1 WHERE department = 'Alice';,0
+SELECT * FROM orders WHERE name='0'' OR 1=1 --';,1
+SELECT * FROM orders WHERE id=1'' OR ''1''=''1'' LIMIT 1; --;,1
+"SELECT * FROM users WHERE username=''' UNION SELECT NULL, username, password FROM users --';",1
+SELECT * FROM users WHERE id=0'' OR 1=1 --;,1
+SELECT * FROM employees WHERE created_at=Swati;,0
+"SELECT email FROM books WHERE email=''' UNION SELECT credit_card, expiry FROM books --';",1
+SELECT * FROM customers WHERE email=Swati;,0
+SELECT * FROM users WHERE username=''' OR ''1''=''1'' #';,1
+' OR SLEEP(5) --,1
+UPDATE sessions SET created_at = created_at + 5 WHERE status = 'Bob';,0
+SELECT name FROM sessions WHERE name > 500;,0
+"SELECT email FROM payments WHERE email='""; DROP TABLE payments; --';",1
+"INSERT INTO orders (email,active) VALUES (1, 10);",0
+SELECT * FROM orders WHERE username='''; DELETE FROM orders; --';,1
+DELETE FROM logs WHERE status < 20;,0
+SELECT balance FROM books WHERE balance = 'Alice';,0
+' OR SLEEP(5) --,1
+SELECT COUNT(*) FROM customers WHERE balance = 'Swati';,0
+SELECT * FROM products WHERE name='''; EXEC xp_cmdshell(''dir''); --';,1
+' OR 'a'='a' --,1
+"INSERT INTO orders (id,name) VALUES (1, 'Charlie');",0
+"SELECT * FROM products WHERE username=''' UNION SELECT NULL, username, password FROM products --';",1
+"INSERT INTO sessions (email,active) VALUES (20, 30);",0
+0' OR 1=1 --,1
+SELECT * FROM sessions WHERE name='0'' OR 1=1 --';,1
+SELECT quantity FROM logs WHERE quantity > 20;,0
+UPDATE products SET id = Bob WHERE id = 2;,0
+DELETE FROM orders WHERE status < 30;,0
+0' OR 1=1 --,1
+SELECT * FROM sessions WHERE id=admin'' --;,1
+SELECT department FROM sessions WHERE department > 1;,0
+DELETE FROM products WHERE quantity < 2;,0
+DELETE FROM payments WHERE name < 20;,0
+"SELECT * FROM users WHERE name='"" OR 1=1 --';",1
+"SELECT email FROM employees WHERE email='""; DROP TABLE employees; --';",1
+"INSERT INTO logs (username,password) VALUES ('Priya', 10);",0
+' OR '1'='1' --,1
+UPDATE employees SET price = price + 2 WHERE email = 'Priya';,0
+SELECT created_at FROM payments WHERE created_at > 30;,0
+UPDATE books SET age = Priya WHERE id = 10;,0
+SELECT * FROM logs WHERE username='admin'' #';,1
+DELETE FROM sessions WHERE id < 5;,0
+SELECT COUNT(*) FROM sessions WHERE status = 'Swati';,0
+"' UNION SELECT credit_card, expiry FROM employees --",1
+"SELECT email FROM orders WHERE email='"" OR ""1""=""1"" --';",1
+1' OR '1'='1' LIMIT 1; --,1
+SELECT * FROM logs WHERE name=''' OR ''1''=''1'' #';,1
+UPDATE users SET created_at = Charlie WHERE id = 2;,0
+SELECT * FROM students WHERE quantity=Priya;,0
+UPDATE orders SET status = Raj WHERE id = 100;,0
+SELECT email FROM users WHERE email = 'Charlie';,0
+SELECT name FROM payments WHERE name = 'Bob';,0
+SELECT balance FROM users WHERE balance > 5;,0
+UPDATE users SET created_at = created_at + 5 WHERE department = 'Raj';,0
+' OR '1'='1' --,1
+SELECT department FROM sessions WHERE department = 'Priya';,0
+SELECT status FROM sessions WHERE status = 'Priya';,0
+SELECT * FROM users WHERE name='1'' OR ''1''=''1'' LIMIT 1; --';,1
+"SELECT * FROM payments WHERE username=''' UNION SELECT credit_card, expiry FROM payments --';",1
+DELETE FROM users WHERE id < 500;,0
+"INSERT INTO payments (title,author) VALUES (20, 500);",0
+"INSERT INTO users (email,active) VALUES (1, 30);",0
+"SELECT * FROM employees WHERE name='"" OR 1=1 --';",1
+SELECT age FROM students WHERE age > 100;,0
+DELETE FROM payments WHERE age < 20;,0
+SELECT COUNT(*) FROM customers WHERE id = 'Alice';,0
+SELECT email FROM books WHERE email=''' OR ''x''=''x'' /*';,1
+' OR 'a'='a' --,1
+"INSERT INTO orders (username,password) VALUES ('Charlie', 5);",0
+""" OR 1=1 --",1
+SELECT COUNT(*) FROM payments WHERE email = 'Swati';,0
+"INSERT INTO products (title,author) VALUES (2, 5);",0
+SELECT * FROM users WHERE username='admin'' --';,1
+DELETE FROM orders WHERE age < 2;,0
+SELECT name FROM customers WHERE name > 10;,0
+UPDATE payments SET price = price + 2 WHERE created_at = 'Bob';,0
+0' OR 1=1 --,1
+SELECT email FROM students WHERE email=''' OR SLEEP(5) --';,1
+SELECT balance FROM customers WHERE balance > 1;,0
+SELECT * FROM books WHERE department=Priya;,0
+SELECT created_at FROM students WHERE created_at > 1;,0
+SELECT * FROM employees WHERE username=''' OR ''1''=''1'' --';,1
+SELECT email FROM employees WHERE email = 'Bob';,0
+'; DROP TABLE employees; --,1
+UPDATE books SET price = price + 2 WHERE balance = 'Charlie';,0
+SELECT age FROM books WHERE age LIKE '%test%';,0
+UPDATE products SET name = Bob WHERE id = 500;,0
+UPDATE logs SET name = name + 5 WHERE status = 'Priya';,0
+SELECT COUNT(*) FROM products WHERE status = 'Swati';,0
+""" OR 1=1 --",1
+SELECT COUNT(*) FROM users WHERE department = 'Raj';,0
+' OR 1=1 --,1
+1' OR '1'='1' LIMIT 1; --,1
+"SELECT * FROM products WHERE id='' UNION SELECT NULL, username, password FROM products --;",1
+SELECT * FROM employees WHERE id=admin'' --;,1
+"INSERT INTO customers (username,password) VALUES ('Charlie', 30);",0
+SELECT * FROM employees WHERE name=''' OR EXISTS(SELECT * FROM employees WHERE username=''admin'') --';,1
+SELECT COUNT(*) FROM books WHERE created_at = 'Raj';,0
+' OR '1'='1' #,1
+"INSERT INTO products (title,author) VALUES (2, 1);",0
+' OR 'x'='x' /*,1
+SELECT * FROM users WHERE username=''' OR ''1''=''1'' #';,1
+UPDATE sessions SET created_at = created_at + 2 WHERE name = 'Charlie';,0
+SELECT quantity FROM students WHERE quantity LIKE '%test%';,0
+SELECT balance FROM users WHERE balance LIKE '%test%';,0
+SELECT quantity FROM employees WHERE quantity LIKE '%test%';,0
+SELECT * FROM orders WHERE name='admin'' #';,1
+SELECT department FROM logs WHERE department = 'Swati';,0
+SELECT COUNT(*) FROM employees WHERE department = 'Charlie';,0
+SELECT COUNT(*) FROM logs WHERE id = 'Swati';,0
+SELECT price FROM payments WHERE price = 'Priya';,0
+SELECT * FROM orders WHERE id=''; UPDATE users SET role=''admin'' WHERE id=1; --;,1
+SELECT id FROM sessions WHERE id > 5;,0
+SELECT * FROM sessions WHERE name=Charlie;,0
+SELECT COUNT(*) FROM payments WHERE created_at = 'Priya';,0
+SELECT email FROM users WHERE email=''' OR EXISTS(SELECT * FROM users WHERE username=''admin'') --';,1
+UPDATE logs SET status = Swati WHERE id = 1;,0
+"SELECT email FROM logs WHERE email=''' UNION SELECT NULL, username, password FROM logs --';",1
+"INSERT INTO users (email,active) VALUES (2, 20);",0
+"INSERT INTO orders (id,name) VALUES (500, 'Alice');",0
+DELETE FROM books WHERE price < 20;,0
+'; DELETE FROM payments; --,1
+' OR EXISTS(SELECT * FROM employees WHERE username='admin') --,1
+"""; DROP TABLE users; --",1
+SELECT id FROM employees WHERE id = 'Alice';,0
+' OR 1=1 --,1
+"INSERT INTO users (name,email) VALUES ('Bob', 5);",0
+SELECT * FROM products WHERE id=Charlie;,0
+DELETE FROM orders WHERE quantity < 1;,0
+SELECT balance FROM customers WHERE balance > 1;,0
+UPDATE sessions SET created_at = created_at + 1 WHERE price = 'Bob';,0
+UPDATE customers SET balance = Bob WHERE id = 500;,0
+'; UPDATE users SET role='admin' WHERE id=1; --,1
+SELECT * FROM students WHERE username='1'' OR ''1''=''1'' LIMIT 1; --';,1
+SELECT age FROM employees WHERE age > 30;,0
+DELETE FROM sessions WHERE email < 2;,0
+SELECT COUNT(*) FROM customers WHERE id = 'Bob';,0
+SELECT department FROM students WHERE department LIKE '%test%';,0
+' OR 'a'='a' --,1
+SELECT department FROM sessions WHERE department > 30;,0
+SELECT age FROM products WHERE age = 'Priya';,0
+SELECT * FROM students WHERE username='''; DROP TABLE students; --';,1
+SELECT * FROM customers WHERE id=1'' OR ''1''=''1'' LIMIT 1; --;,1
+"' UNION SELECT credit_card, expiry FROM customers --",1
+SELECT name FROM customers WHERE name = 'Charlie';,0
+UPDATE logs SET id = Alice WHERE id = 100;,0
+SELECT * FROM users WHERE id=''; UPDATE users SET role=''admin'' WHERE id=1; --;,1
+UPDATE payments SET balance = Priya WHERE id = 30;,0
+UPDATE employees SET id = id + 1 WHERE price = 'Swati';,0
+SELECT * FROM sessions WHERE name='''; UPDATE users SET role=''admin'' WHERE id=1; --';,1
+UPDATE employees SET email = Charlie WHERE id = 100;,0
+SELECT email FROM users WHERE email='admin'' #';,1
+"INSERT INTO users (id,product,qty) VALUES (30, 1, 30);",0
+DELETE FROM sessions WHERE email < 10;,0
+"' UNION SELECT credit_card, expiry FROM payments --",1
+DELETE FROM users WHERE id < 5;,0
+"SELECT * FROM employees WHERE id="" OR ""1""=""1"" --;",1
+SELECT price FROM books WHERE price LIKE '%test%';,0
+SELECT department FROM products WHERE department = 'Alice';,0
+UPDATE products SET email = Raj WHERE id = 2;,0
+"INSERT INTO customers (name,email) VALUES ('Swati', 1);",0
+"INSERT INTO payments (id,product,qty) VALUES (5, 1, 500);",0
+' OR 1=1 --,1
+SELECT * FROM sessions WHERE status=Raj;,0
+SELECT * FROM customers WHERE id=admin'' --;,1
+UPDATE sessions SET quantity = quantity + 5 WHERE email = 'Charlie';,0
+SELECT status FROM students WHERE status > 2;,0
+SELECT * FROM employees WHERE id=1'' OR ''1''=''1'' LIMIT 1; --;,1
+"SELECT * FROM payments WHERE name='"" OR 1=1 --';",1
+UPDATE products SET age = Bob WHERE id = 5;,0
+'; DROP TABLE logs; --,1
+' OR '1'='1' --,1
+SELECT name FROM sessions WHERE name > 5;,0
+SELECT age FROM products WHERE age LIKE '%test%';,0
+SELECT COUNT(*) FROM customers WHERE age = 'Raj';,0
+SELECT price FROM books WHERE price LIKE '%test%';,0
+' OR 1=1 --,1
+UPDATE logs SET created_at = created_at + 5 WHERE status = 'Alice';,0
+DELETE FROM payments WHERE created_at < 20;,0
+UPDATE logs SET quantity = Swati WHERE id = 30;,0
+SELECT age FROM orders WHERE age LIKE '%test%';,0
+DELETE FROM orders WHERE status < 5;,0
+SELECT quantity FROM logs WHERE quantity = 'Alice';,0
+SELECT * FROM payments WHERE username='''; DELETE FROM payments; --';,1
+' OR '1'='1' #,1
+' OR 1=1 --,1
+SELECT * FROM logs WHERE id=''; EXEC xp_cmdshell(''dir''); --;,1
+"SELECT * FROM books WHERE username=''' UNION SELECT credit_card, expiry FROM books --';",1
+SELECT * FROM sessions WHERE username=''' OR ''a''=''a'' --';,1
+SELECT COUNT(*) FROM logs WHERE balance = 'Swati';,0
+""" OR 1=1 --",1
+SELECT * FROM orders WHERE name='''; EXEC xp_cmdshell(''dir''); --';,1
+UPDATE books SET department = department + 1 WHERE created_at = 'Raj';,0
+SELECT email FROM payments WHERE email=''' OR ''x''=''x'' /*';,1
+SELECT * FROM users WHERE username=''' OR ''a''=''a'' --';,1
+"SELECT * FROM students WHERE name='""; DROP TABLE students; --';",1
+"SELECT * FROM payments WHERE name=''' UNION SELECT credit_card, expiry FROM payments --';",1
+UPDATE payments SET name = name + 2 WHERE quantity = 'Swati';,0
+SELECT * FROM sessions WHERE id=admin'' #;,1
+SELECT COUNT(*) FROM students WHERE name = 'Bob';,0
+SELECT * FROM products WHERE username=''' OR ''a''=''a'' --';,1
+SELECT * FROM customers WHERE username='1'' OR ''1''=''1'' LIMIT 1; --';,1
+SELECT email FROM products WHERE email = 'Bob';,0
+DELETE FROM employees WHERE department < 500;,0
+' OR 'a'='a' --,1
+UPDATE users SET created_at = Swati WHERE id = 1;,0
+SELECT COUNT(*) FROM books WHERE status = 'Bob';,0
+SELECT * FROM books WHERE name='admin'' --';,1
+SELECT * FROM products WHERE department=Raj;,0
+SELECT COUNT(*) FROM employees WHERE balance = 'Bob';,0
+SELECT email FROM users WHERE email LIKE '%test%';,0
+SELECT * FROM customers WHERE email=Priya;,0
+"SELECT email FROM users WHERE email=''' UNION SELECT NULL, username, password FROM users --';",1
+SELECT * FROM payments WHERE department=Bob;,0
+SELECT * FROM employees WHERE id=''; EXEC xp_cmdshell(''dir''); --;,1
+SELECT email FROM books WHERE email > 500;,0
+UPDATE payments SET price = Raj WHERE id = 1;,0
+"INSERT INTO employees (id,name) VALUES (2, 'Swati');",0
+SELECT status FROM employees WHERE status LIKE '%test%';,0
+SELECT created_at FROM products WHERE created_at > 10;,0
+SELECT age FROM employees WHERE age LIKE '%test%';,0
+DELETE FROM customers WHERE id < 1;,0
+UPDATE payments SET balance = balance + 5 WHERE price = 'Bob';,0
+SELECT * FROM employees WHERE id=Charlie;,0
+' OR 1=1 --,1
+SELECT COUNT(*) FROM employees WHERE quantity = 'Bob';,0
+SELECT created_at FROM customers WHERE created_at LIKE '%test%';,0
+SELECT email FROM products WHERE email='''; DROP TABLE products; --';,1
+UPDATE users SET balance = Priya WHERE id = 500;,0
+SELECT email FROM employees WHERE email='admin'' #';,1
+SELECT * FROM employees WHERE username='''; UPDATE users SET role=''admin'' WHERE id=1; --';,1
+SELECT COUNT(*) FROM orders WHERE email = 'Bob';,0
+SELECT balance FROM sessions WHERE balance = 'Swati';,0
+SELECT department FROM products WHERE department > 1;,0
+"SELECT * FROM customers WHERE name='"" OR 1=1 --';",1
+SELECT * FROM customers WHERE name='''; DELETE FROM customers; --';,1
+'; DROP TABLE students; --,1
+SELECT * FROM employees WHERE name='''; DELETE FROM employees; --';,1
+SELECT COUNT(*) FROM customers WHERE created_at = 'Raj';,0
+DELETE FROM books WHERE department < 5;,0
+SELECT department FROM orders WHERE department > 2;,0
+"SELECT * FROM employees WHERE id="" OR ""1""=""1"" --;",1
+SELECT age FROM customers WHERE age = 'Alice';,0
+'; DELETE FROM customers; --,1
+' OR 'a'='a' --,1
+SELECT * FROM books WHERE created_at=Raj;,0
+SELECT * FROM logs WHERE name=''' OR ''1''=''1'' #';,1
+SELECT email FROM orders WHERE email = 'Alice';,0
+""" OR 1=1 --",1
+DELETE FROM employees WHERE department < 20;,0
+UPDATE customers SET id = Bob WHERE id = 500;,0
+SELECT * FROM customers WHERE id='' OR 1=1 --;,1
+SELECT * FROM orders WHERE username='''; UPDATE users SET role=''admin'' WHERE id=1; --';,1
+SELECT email FROM orders WHERE email LIKE '%test%';,0
+SELECT COUNT(*) FROM payments WHERE quantity = 'Raj';,0
+SELECT created_at FROM sessions WHERE created_at = 'Charlie';,0
+SELECT COUNT(*) FROM users WHERE status = 'Alice';,0
+SELECT department FROM students WHERE department LIKE '%test%';,0
+UPDATE sessions SET name = name + 5 WHERE email = 'Bob';,0
+""" OR ""1""=""1"" --",1
+UPDATE users SET price = Bob WHERE id = 100;,0
+SELECT * FROM employees WHERE id='' OR ''a''=''a'' --;,1
+SELECT id FROM customers WHERE id > 30;,0
+SELECT * FROM employees WHERE name=''' OR ''1''=''1'' #';,1
+UPDATE books SET balance = Priya WHERE id = 30;,0
+SELECT * FROM customers WHERE department=Alice;,0
+' OR '1'='1' --,1
+SELECT email FROM orders WHERE email > 2;,0
+0' OR 1=1 --,1
+SELECT * FROM users WHERE id=Bob;,0
+DELETE FROM orders WHERE price < 500;,0
+UPDATE books SET id = id + 1 WHERE created_at = 'Priya';,0
+SELECT COUNT(*) FROM logs WHERE name = 'Swati';,0
+SELECT name FROM customers WHERE name = 'Bob';,0
+SELECT COUNT(*) FROM students WHERE email = 'Bob';,0
+"SELECT * FROM employees WHERE id='' UNION SELECT NULL, username, password FROM employees --;",1
+SELECT email FROM students WHERE email LIKE '%test%';,0
+DELETE FROM customers WHERE created_at < 5;,0
+"INSERT INTO students (username,password) VALUES ('Charlie', 30);",0
+SELECT created_at FROM books WHERE created_at > 5;,0
+"SELECT * FROM students WHERE username=''' UNION SELECT credit_card, expiry FROM students --';",1
+SELECT * FROM sessions WHERE quantity=Raj;,0
+UPDATE users SET department = department + 2 WHERE id = 'Raj';,0
+SELECT * FROM payments WHERE id=admin'' #;,1
+DELETE FROM logs WHERE id < 100;,0
+SELECT balance FROM logs WHERE balance = 'Raj';,0
+SELECT COUNT(*) FROM payments WHERE id = 'Swati';,0
+"SELECT * FROM logs WHERE name='"" OR 1=1 --';",1
+SELECT email FROM customers WHERE email=''' OR ''a''=''a'' --';,1
+SELECT age FROM books WHERE age > 5;,0
+"SELECT email FROM students WHERE email='"" OR 1=1 --';",1
+SELECT COUNT(*) FROM customers WHERE department = 'Alice';,0
+DELETE FROM employees WHERE department < 30;,0
+SELECT * FROM orders WHERE name=''' OR ''x''=''x'' /*';,1
+UPDATE payments SET price = Charlie WHERE id = 10;,0
+"SELECT email FROM users WHERE email='"" OR ""1""=""1"" --';",1
+SELECT * FROM customers WHERE name=''' OR ''a''=''a'' --';,1
+SELECT COUNT(*) FROM customers WHERE balance = 'Priya';,0
+SELECT * FROM logs WHERE name=''' OR ''1''=''1'' #';,1
+SELECT * FROM payments WHERE username='admin'' #';,1
+UPDATE customers SET name = name + 5 WHERE department = 'Swati';,0
+SELECT * FROM customers WHERE name=''' OR ''a''=''a'' --';,1
+SELECT balance FROM sessions WHERE balance > 100;,0
+"SELECT * FROM products WHERE username='""; DROP TABLE products; --';",1
+SELECT * FROM orders WHERE price=Priya;,0
+SELECT email FROM logs WHERE email > 30;,0
+SELECT * FROM customers WHERE name=''' OR ''1''=''1'' #';,1
+"SELECT * FROM employees WHERE id="" OR 1=1 --;",1
+"INSERT INTO users (email,active) VALUES (10, 10);",0
+UPDATE books SET id = id + 1 WHERE quantity = 'Raj';,0
+UPDATE customers SET name = Swati WHERE id = 1;,0
+"SELECT * FROM students WHERE name='""; DROP TABLE students; --';",1
+SELECT COUNT(*) FROM products WHERE department = 'Bob';,0
+' OR '1'='1' --,1
+' OR '1'='1' #,1
+"INSERT INTO payments (id,product,qty) VALUES (20, 10, 500);",0
+' OR SLEEP(5) --,1
+"SELECT email FROM users WHERE email='""; DROP TABLE users; --';",1
+SELECT * FROM products WHERE age=Alice;,0
+SELECT COUNT(*) FROM students WHERE department = 'Raj';,0
+UPDATE sessions SET age = Alice WHERE id = 20;,0
+SELECT COUNT(*) FROM employees WHERE age = 'Raj';,0
+SELECT department FROM employees WHERE department = 'Bob';,0
+"INSERT INTO students (id,product,qty) VALUES (100, 30, 30);",0
+SELECT * FROM sessions WHERE id='' OR ''x''=''x'' /*;,1
+SELECT email FROM logs WHERE email = 'Alice';,0
+SELECT balance FROM payments WHERE balance LIKE '%test%';,0
+SELECT COUNT(*) FROM orders WHERE name = 'Alice';,0
+DELETE FROM products WHERE age < 5;,0
+SELECT created_at FROM products WHERE created_at LIKE '%test%';,0
+UPDATE sessions SET age = Swati WHERE id = 20;,0
+"SELECT * FROM orders WHERE id="" OR 1=1 --;",1
+SELECT * FROM employees WHERE username='''; UPDATE users SET role=''admin'' WHERE id=1; --';,1
+SELECT name FROM products WHERE name = 'Charlie';,0
+DELETE FROM products WHERE id < 30;,0
+UPDATE books SET balance = Swati WHERE id = 1;,0
+SELECT COUNT(*) FROM orders WHERE created_at = 'Charlie';,0
+SELECT * FROM customers WHERE username='admin'' --';,1
+SELECT email FROM users WHERE email=''' OR ''x''=''x'' /*';,1
+UPDATE customers SET created_at = Priya WHERE id = 10;,0
+UPDATE books SET price = Bob WHERE id = 1;,0
+"' UNION SELECT NULL, username, password FROM orders --",1
+SELECT * FROM employees WHERE username=''' OR ''1''=''1'' #';,1
+SELECT status FROM customers WHERE status LIKE '%test%';,0
+UPDATE payments SET created_at = created_at + 1 WHERE department = 'Swati';,0
+admin' #,1
+SELECT * FROM books WHERE age=Priya;,0
+SELECT email FROM sessions WHERE email = 'Charlie';,0
+UPDATE customers SET quantity = Raj WHERE id = 20;,0
+UPDATE students SET department = department + 1 WHERE balance = 'Charlie';,0
+1' OR '1'='1' LIMIT 1; --,1
+UPDATE students SET department = department + 5 WHERE balance = 'Swati';,0
+SELECT quantity FROM users WHERE quantity = 'Bob';,0
+SELECT email FROM users WHERE email='''; UPDATE users SET role=''admin'' WHERE id=1; --';,1
+SELECT * FROM products WHERE name=Swati;,0
+SELECT * FROM customers WHERE created_at=Charlie;,0
+SELECT * FROM payments WHERE age=Priya;,0
+SELECT * FROM users WHERE name=''' OR ''x''=''x'' /*';,1
+UPDATE logs SET created_at = created_at + 5 WHERE age = 'Bob';,0
+SELECT * FROM customers WHERE name=''' OR SLEEP(5) --';,1
+DELETE FROM users WHERE id < 5;,0
+DELETE FROM students WHERE id < 30;,0
+"INSERT INTO customers (title,author) VALUES (500, 10);",0
+SELECT name FROM logs WHERE name LIKE '%test%';,0
+SELECT * FROM orders WHERE name='''; UPDATE users SET role=''admin'' WHERE id=1; --';,1
+UPDATE users SET email = email + 5 WHERE status = 'Alice';,0
+' OR 'x'='x' /*,1
+UPDATE sessions SET quantity = Charlie WHERE id = 5;,0
+UPDATE users SET id = id + 2 WHERE balance = 'Swati';,0
+'; DELETE FROM sessions; --,1
+SELECT * FROM customers WHERE name=''' OR 1=1 --';,1
+SELECT department FROM orders WHERE department = 'Swati';,0
+admin' --,1
+"INSERT INTO sessions (username,password) VALUES ('Charlie', 1);",0
+DELETE FROM customers WHERE age < 1;,0
+SELECT price FROM logs WHERE price LIKE '%test%';,0
+SELECT * FROM payments WHERE balance=Bob;,0
+'; UPDATE users SET role='admin' WHERE id=1; --,1
+' OR EXISTS(SELECT * FROM books WHERE username='admin') --,1
+UPDATE users SET created_at = created_at + 5 WHERE created_at = 'Raj';,0
+"SELECT email FROM employees WHERE email=''' UNION SELECT NULL, username, password FROM employees --';",1
+DELETE FROM employees WHERE balance < 100;,0
+UPDATE orders SET created_at = created_at + 2 WHERE age = 'Raj';,0
+"INSERT INTO books (username,password) VALUES ('Raj', 10);",0
+DELETE FROM books WHERE price < 10;,0
+UPDATE products SET email = email + 2 WHERE department = 'Priya';,0
+SELECT created_at FROM employees WHERE created_at > 1;,0
+SELECT * FROM employees WHERE id=0'' OR 1=1 --;,1
+"SELECT * FROM students WHERE id=""; DROP TABLE students; --;",1
+"""; DROP TABLE orders; --",1
+SELECT * FROM orders WHERE balance=Bob;,0
+"SELECT * FROM orders WHERE name='"" OR 1=1 --';",1
+"INSERT INTO payments (title,author) VALUES (20, 100);",0
+"SELECT * FROM users WHERE username=''' UNION SELECT NULL, username, password FROM users --';",1
+SELECT * FROM logs WHERE balance=Priya;,0
+""" OR ""1""=""1"" --",1
+SELECT * FROM employees WHERE email=Alice;,0
+UPDATE users SET id = id + 1 WHERE price = 'Swati';,0
+'; EXEC xp_cmdshell('dir'); --,1
+SELECT id FROM users WHERE id > 5;,0
+"' UNION SELECT NULL, username, password FROM sessions --",1
+SELECT COUNT(*) FROM products WHERE email = 'Charlie';,0
+"SELECT email FROM orders WHERE email='""; DROP TABLE orders; --';",1
+UPDATE payments SET created_at = Charlie WHERE id = 1;,0
+admin' #,1
+""" OR ""1""=""1"" --",1
+DELETE FROM orders WHERE price < 2;,0
+UPDATE employees SET department = Bob WHERE id = 100;,0
+' OR 1=1 --,1
+SELECT COUNT(*) FROM customers WHERE created_at = 'Charlie';,0
+"SELECT * FROM books WHERE id=""; DROP TABLE books; --;",1
+SELECT email FROM logs WHERE email > 2;,0
+SELECT * FROM logs WHERE id=''; UPDATE users SET role=''admin'' WHERE id=1; --;,1
+DELETE FROM sessions WHERE balance < 30;,0
+"SELECT * FROM customers WHERE username='""; DROP TABLE customers; --';",1
+"SELECT * FROM customers WHERE username='"" OR ""1""=""1"" --';",1
+SELECT * FROM students WHERE status=Swati;,0
+SELECT email FROM books WHERE email > 2;,0
+' OR 'a'='a' --,1
+SELECT created_at FROM logs WHERE created_at > 10;,0
+SELECT email FROM customers WHERE email = 'Raj';,0
+admin' #,1
+"SELECT * FROM customers WHERE id='' UNION SELECT credit_card, expiry FROM customers --;",1
+SELECT COUNT(*) FROM logs WHERE status = 'Bob';,0
+SELECT name FROM students WHERE name > 10;,0
+SELECT * FROM students WHERE id=''; EXEC xp_cmdshell(''dir''); --;,1
+SELECT created_at FROM users WHERE created_at > 500;,0
+SELECT balance FROM customers WHERE balance LIKE '%test%';,0
+UPDATE employees SET age = Alice WHERE id = 10;,0
+SELECT email FROM sessions WHERE email='0'' OR 1=1 --';,1
+SELECT * FROM orders WHERE name='''; EXEC xp_cmdshell(''dir''); --';,1
+SELECT * FROM customers WHERE id=admin'' #;,1
+SELECT balance FROM logs WHERE balance > 1;,0
+UPDATE products SET quantity = Bob WHERE id = 5;,0
+SELECT * FROM payments WHERE name=Raj;,0
+SELECT email FROM users WHERE email LIKE '%test%';,0
+UPDATE students SET quantity = quantity + 2 WHERE status = 'Charlie';,0
+""" OR 1=1 --",1
+' OR SLEEP(5) --,1
+SELECT COUNT(*) FROM books WHERE id = 'Alice';,0
+UPDATE students SET age = age + 5 WHERE id = 'Alice';,0
+"INSERT INTO payments (title,author) VALUES (100, 10);",0
+SELECT quantity FROM sessions WHERE quantity > 5;,0
+admin' --,1
+"SELECT * FROM users WHERE id='' UNION SELECT NULL, username, password FROM users --;",1
+UPDATE products SET age = Bob WHERE id = 10;,0
+SELECT email FROM payments WHERE email='admin'' --';,1
+"INSERT INTO orders (name,email) VALUES ('Alice', 1);",0
+UPDATE customers SET age = Swati WHERE id = 10;,0
+UPDATE sessions SET status = Swati WHERE id = 2;,0
+SELECT department FROM sessions WHERE department > 20;,0
+"' UNION SELECT credit_card, expiry FROM employees --",1
+"SELECT * FROM customers WHERE username='"" OR ""1""=""1"" --';",1
+SELECT age FROM products WHERE age = 'Bob';,0
+SELECT * FROM users WHERE username='''; EXEC xp_cmdshell(''dir''); --';,1
+UPDATE orders SET department = department + 1 WHERE created_at = 'Bob';,0
+""" OR 1=1 --",1
+SELECT balance FROM sessions WHERE balance > 5;,0
+' OR EXISTS(SELECT * FROM orders WHERE username='admin') --,1
+SELECT COUNT(*) FROM employees WHERE name = 'Priya';,0
+UPDATE sessions SET department = department + 5 WHERE id = 'Alice';,0
+SELECT id FROM logs WHERE id LIKE '%test%';,0
+admin' --,1
+SELECT * FROM students WHERE quantity=Charlie;,0
+SELECT * FROM books WHERE username='admin'' --';,1
+SELECT name FROM products WHERE name LIKE '%test%';,0
+SELECT price FROM employees WHERE price > 500;,0
+"SELECT email FROM students WHERE email=''' UNION SELECT credit_card, expiry FROM students --';",1
+SELECT age FROM sessions WHERE age > 20;,0
+"""; DROP TABLE users; --",1
+SELECT created_at FROM customers WHERE created_at = 'Alice';,0
+SELECT * FROM orders WHERE username=''' OR ''x''=''x'' /*';,1
+SELECT * FROM books WHERE department=Alice;,0
+SELECT * FROM logs WHERE name=''' OR 1=1 --';,1
+UPDATE books SET department = department + 2 WHERE department = 'Swati';,0
+UPDATE payments SET name = name + 5 WHERE name = 'Priya';,0
+DELETE FROM sessions WHERE balance < 30;,0
+SELECT email FROM users WHERE email='''; DROP TABLE users; --';,1
+SELECT * FROM orders WHERE id=admin'' #;,1
+SELECT id FROM logs WHERE id LIKE '%test%';,0
+SELECT status FROM logs WHERE status LIKE '%test%';,0
+SELECT email FROM users WHERE email LIKE '%test%';,0
+"' UNION SELECT credit_card, expiry FROM sessions --",1
+DELETE FROM employees WHERE name < 30;,0
+UPDATE employees SET created_at = Alice WHERE id = 500;,0
+SELECT name FROM customers WHERE name > 30;,0
+"INSERT INTO products (email,active) VALUES (10, 500);",0
+DELETE FROM employees WHERE price < 100;,0
+SELECT email FROM books WHERE email=''' OR ''x''=''x'' /*';,1
+SELECT * FROM products WHERE balance=Priya;,0
+SELECT balance FROM customers WHERE balance = 'Raj';,0
+SELECT quantity FROM sessions WHERE quantity > 500;,0
+SELECT COUNT(*) FROM orders WHERE age = 'Bob';,0
+SELECT age FROM employees WHERE age > 30;,0
+UPDATE employees SET created_at = Priya WHERE id = 30;,0
+UPDATE employees SET name = Raj WHERE id = 500;,0
+DELETE FROM logs WHERE balance < 5;,0
+SELECT COUNT(*) FROM logs WHERE id = 'Alice';,0
+SELECT department FROM sessions WHERE department LIKE '%test%';,0
+admin' #,1
+UPDATE sessions SET created_at = created_at + 2 WHERE name = 'Priya';,0
+"SELECT * FROM customers WHERE id="" OR 1=1 --;",1
+SELECT email FROM products WHERE email=''' OR ''x''=''x'' /*';,1
+SELECT status FROM students WHERE status = 'Charlie';,0
+""" OR 1=1 --",1
+SELECT price FROM payments WHERE price = 'Swati';,0
+DELETE FROM orders WHERE department < 5;,0
+DELETE FROM products WHERE balance < 2;,0
+SELECT quantity FROM employees WHERE quantity = 'Alice';,0
+SELECT * FROM payments WHERE username='''; EXEC xp_cmdshell(''dir''); --';,1
+SELECT * FROM employees WHERE name=Raj;,0
+SELECT COUNT(*) FROM employees WHERE email = 'Alice';,0
+SELECT * FROM products WHERE name=Bob;,0
+SELECT age FROM orders WHERE age LIKE '%test%';,0
+DELETE FROM customers WHERE department < 5;,0
+SELECT COUNT(*) FROM students WHERE status = 'Charlie';,0
+UPDATE payments SET price = Priya WHERE id = 10;,0
+DELETE FROM books WHERE name < 500;,0
+UPDATE products SET department = department + 2 WHERE id = 'Raj';,0
+"SELECT * FROM books WHERE name=''' UNION SELECT credit_card, expiry FROM books --';",1
+' OR '1'='1' #,1
+SELECT * FROM payments WHERE name='''; DROP TABLE payments; --';,1
+1' OR '1'='1' LIMIT 1; --,1
+' OR '1'='1' --,1
+SELECT * FROM logs WHERE id='' OR ''1''=''1'' #;,1
+UPDATE books SET created_at = created_at + 1 WHERE status = 'Bob';,0
+UPDATE employees SET id = Bob WHERE id = 2;,0
+SELECT age FROM logs WHERE age LIKE '%test%';,0
+DELETE FROM employees WHERE department < 30;,0
+SELECT * FROM products WHERE name='''; EXEC xp_cmdshell(''dir''); --';,1
+SELECT name FROM logs WHERE name = 'Swati';,0
+SELECT * FROM books WHERE id=''; EXEC xp_cmdshell(''dir''); --;,1
+"' UNION SELECT credit_card, expiry FROM payments --",1
+SELECT COUNT(*) FROM sessions WHERE quantity = 'Priya';,0
+"INSERT INTO logs (id,product,qty) VALUES (1, 10, 500);",0
+SELECT COUNT(*) FROM products WHERE name = 'Charlie';,0
+SELECT department FROM users WHERE department = 'Priya';,0
+"INSERT INTO sessions (email,active) VALUES (30, 5);",0
+UPDATE orders SET balance = Charlie WHERE id = 100;,0
+""" OR ""1""=""1"" --",1
+"SELECT email FROM products WHERE email='""; DROP TABLE products; --';",1
+SELECT price FROM payments WHERE price LIKE '%test%';,0
+SELECT price FROM students WHERE price = 'Swati';,0
+SELECT COUNT(*) FROM payments WHERE id = 'Swati';,0
+SELECT COUNT(*) FROM orders WHERE age = 'Alice';,0
+DELETE FROM customers WHERE balance < 10;,0
+' OR 'a'='a' --,1
+"INSERT INTO products (name,email) VALUES ('Alice', 20);",0
+DELETE FROM logs WHERE name < 500;,0
+SELECT * FROM sessions WHERE id=''; EXEC xp_cmdshell(''dir''); --;,1
+"""; DROP TABLE employees; --",1
+SELECT id FROM customers WHERE id = 'Charlie';,0
+SELECT balance FROM students WHERE balance LIKE '%test%';,0
+UPDATE orders SET quantity = quantity + 2 WHERE name = 'Alice';,0
+DELETE FROM employees WHERE id < 5;,0
+UPDATE employees SET quantity = Charlie WHERE id = 100;,0
+UPDATE logs SET name = Swati WHERE id = 20;,0
+1' OR '1'='1' LIMIT 1; --,1
+UPDATE customers SET quantity = quantity + 2 WHERE created_at = 'Charlie';,0
+SELECT email FROM orders WHERE email=''' OR ''x''=''x'' /*';,1
+SELECT * FROM customers WHERE id='' OR ''1''=''1'' #;,1
+SELECT * FROM students WHERE id='' OR 1=1 --;,1
+SELECT status FROM students WHERE status > 1;,0
+SELECT balance FROM orders WHERE balance LIKE '%test%';,0
+SELECT * FROM employees WHERE username=''' OR SLEEP(5) --';,1
+SELECT * FROM users WHERE username=''' OR ''1''=''1'' #';,1
+' OR '1'='1' --,1
+SELECT price FROM users WHERE price > 1;,0
+"INSERT INTO payments (title,author) VALUES (30, 500);",0
+"INSERT INTO users (id,name) VALUES (30, 'Priya');",0
+SELECT age FROM employees WHERE age LIKE '%test%';,0
+' OR 'x'='x' /*,1
+SELECT COUNT(*) FROM customers WHERE quantity = 'Raj';,0
+SELECT email FROM products WHERE email='0'' OR 1=1 --';,1
+SELECT * FROM users WHERE username='1'' OR ''1''=''1'' LIMIT 1; --';,1
